@@ -27,7 +27,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
 
   const location = getByValue(locationValue);
 
-  return ( 
+  return (
     <>
       <Heading
         title={title}
@@ -54,14 +54,14 @@ const ListingHead: React.FC<ListingHeadProps> = ({
             right-5
           "
         >
-          <HeartButton 
+          <HeartButton
             listingId={id}
             currentUser={currentUser}
           />
         </div>
       </div>
     </>
-   );
+  );
 }
- 
+
 export default ListingHead;

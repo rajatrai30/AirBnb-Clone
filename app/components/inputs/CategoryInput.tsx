@@ -15,7 +15,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
   selected,
   onClick
 }) => {
-  return ( 
+  return (
     <div
       onClick={() => onClick(label)}
       className={`
@@ -36,7 +36,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         {label}
       </div>
     </div>
-   );
+  );
 }
- 
+
 export default CategoryBox;

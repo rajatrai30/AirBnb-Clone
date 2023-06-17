@@ -27,26 +27,26 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
     setDeletingId(id);
 
     axios.delete(`/api/listings/${id}`)
-    .then(() => {
-      toast.success('Listing deleted');
-      router.refresh();
-    })
-    .catch((error) => {
-      toast.error(error?.response?.data?.error)
-    })
-    .finally(() => {
-      setDeletingId('');
-    })
+      .then(() => {
+        toast.success('Listing deleted');
+        router.refresh();
+      })
+      .catch((error) => {
+        toast.error(error?.response?.data?.error)
+      })
+      .finally(() => {
+        setDeletingId('');
+      })
   }, [router]);
 
 
-  return ( 
+  return (
     <Container>
       <Heading
         title="Properties"
         subtitle="List of your properties"
       />
-      <div 
+      <div
         className="
           mt-10
           grid 
@@ -72,7 +72,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
         ))}
       </div>
     </Container>
-   );
+  );
 }
- 
+
 export default PropertiesClient;

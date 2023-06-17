@@ -39,5 +39,5 @@ const PropertiesPage = async () => {
     </ClientOnly>
   );
 }
- 
+
 export default PropertiesPage;

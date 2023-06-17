@@ -18,8 +18,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   const router = useRouter();
 
-  return ( 
-    <div 
+  return (
+    <div
       className="
         h-[60vh]
         flex 
@@ -44,7 +44,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
         )}
       </div>
     </div>
-   );
+  );
 }
- 
+
 export default EmptyState;

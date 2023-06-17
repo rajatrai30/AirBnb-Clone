@@ -21,7 +21,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 
   const handleClick = useCallback(() => {
     let currentQuery = {};
-    
+
     if (params) {
       currentQuery = qs.parse(params.toString())
     }
@@ -43,7 +43,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     router.push(url);
   }, [label, router, params]);
 
-  return ( 
+  return (
     <div
       onClick={handleClick}
       className={`
@@ -66,7 +66,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         {label}
       </div>
     </div>
-   );
+  );
 }
- 
+
 export default CategoryBox;

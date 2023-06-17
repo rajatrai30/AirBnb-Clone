@@ -27,16 +27,16 @@ const TripsClient: React.FC<TripsClientProps> = ({
     setDeletingId(id);
 
     axios.delete(`/api/reservations/${id}`)
-    .then(() => {
-      toast.success('Reservation cancelled');
-      router.refresh();
-    })
-    .catch((error) => {
-      toast.error(error?.response?.data?.error)
-    })
-    .finally(() => {
-      setDeletingId('');
-    })
+      .then(() => {
+        toast.success('Reservation cancelled');
+        router.refresh();
+      })
+      .catch((error) => {
+        toast.error(error?.response?.data?.error)
+      })
+      .finally(() => {
+        setDeletingId('');
+      })
   }, [router]);
 
   return (
@@ -45,7 +45,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
         title="Trips"
         subtitle="Where you've been and where you're going"
       />
-      <div 
+      <div
         className="
           mt-10
           grid 
@@ -72,7 +72,7 @@ const TripsClient: React.FC<TripsClientProps> = ({
         ))}
       </div>
     </Container>
-   );
+  );
 }
- 
+
 export default TripsClient;

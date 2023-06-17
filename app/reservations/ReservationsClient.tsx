@@ -6,7 +6,7 @@ import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { SafeReservation, SafeUser } from "@/app/types"
-;
+  ;
 import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
 import ListingCard from "@/app/components/listings/ListingCard";
@@ -27,16 +27,16 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
     setDeletingId(id);
 
     axios.delete(`/api/reservations/${id}`)
-    .then(() => {
-      toast.success('Reservation cancelled');
-      router.refresh();
-    })
-    .catch(() => {
-      toast.error('Something went wrong.')
-    })
-    .finally(() => {
-      setDeletingId('');
-    })
+      .then(() => {
+        toast.success('Reservation cancelled');
+        router.refresh();
+      })
+      .catch(() => {
+        toast.error('Something went wrong.')
+      })
+      .finally(() => {
+        setDeletingId('');
+      })
   }, [router]);
 
   return (
@@ -45,7 +45,7 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
         title="Reservations"
         subtitle="Bookings on your properties"
       />
-      <div 
+      <div
         className="
           mt-10
           grid 
@@ -72,7 +72,7 @@ const ReservationsClient: React.FC<ReservationsClientProps> = ({
         ))}
       </div>
     </Container>
-   );
+  );
 }
- 
+
 export default ReservationsClient;

@@ -9,6 +9,7 @@ declare global {
   var cloudinary: any
 }
 
+// A PRESET UPLOAD RETRIEVED FROM THE CLOUDINARY TO THE IMAGES AND ACT IT LIKE AS AN IMAGE AND VIDEO API
 const uploadPreset = "zydyvzue";
 
 interface ImageUploadProps {
@@ -25,8 +26,8 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   }, [onChange]);
 
   return (
-    <CldUploadWidget 
-      onUpload={handleUpload} 
+    <CldUploadWidget
+      onUpload={handleUpload}
       uploadPreset={uploadPreset}
       options={{
         maxFiles: 1
@@ -63,16 +64,16 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
               <div className="
               absolute inset-0 w-full h-full">
                 <Image
-                  fill 
-                  style={{ objectFit: 'cover' }} 
-                  src={value} 
-                  alt="House" 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  src={value}
+                  alt="House"
                 />
               </div>
             )}
           </div>
-        ) 
-    }}
+        )
+      }}
     </CldUploadWidget>
   );
 }

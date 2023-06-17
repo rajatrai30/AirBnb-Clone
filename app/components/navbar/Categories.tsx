@@ -2,13 +2,13 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { TbBeach, TbMountain, TbPool } from 'react-icons/tb';
-import { 
-  GiBarn, 
-  GiBoatFishing, 
-  GiCactus, 
-  GiCastle, 
-  GiCaveEntrance, 
-  GiForestCamp, 
+import {
+  GiBarn,
+  GiBoatFishing,
+  GiCactus,
+  GiCastle,
+  GiCaveEntrance,
+  GiForestCamp,
   GiIsland,
   GiWindmill
 } from 'react-icons/gi';
@@ -122,7 +122,7 @@ const Categories = () => {
         "
       >
         {categories.map((item) => (
-          <CategoryBox 
+          <CategoryBox
             key={item.label}
             label={item.label}
             icon={item.icon}
@@ -133,5 +133,5 @@ const Categories = () => {
     </Container>
   );
 }
- 
+
 export default Categories;
